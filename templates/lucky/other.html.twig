@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1 style='background:grey;'>Your lucky luke number is {{ number }}</h1>
+{# <h1>Your lucky number is {{ number }}</h1> #}
+{% endblock %}
+
+{% block title %}Your lucky number is {{ number }}!{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        alert('You are a winner!');
+    </script>
+{% endblock %}
